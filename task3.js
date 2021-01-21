@@ -15,10 +15,10 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-
-let marc = "";
-images.forEach((image) => {
-  marc += `<li> <img src = ${image.url}, alt =  ${image.alt}> </li>`;
-});
-// console.log(marc);
+const marc = images.reduce((str, image) => { return str + `<li><img src = ${image.url}, alt =  ${image.alt}></li>` }, "");
+// let marc = "";
+// images.forEach((image) => {
+//   marc += `<li> <img src = ${image.url}, alt =  ${image.alt}> </li>`;
+// });
+console.log(marc);
 document.querySelector(`#gallery`).insertAdjacentHTML(`beforeend`, marc);

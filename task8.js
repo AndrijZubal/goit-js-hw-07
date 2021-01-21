@@ -20,9 +20,10 @@ function onBtnDecrementClick() {
 }
 
 function destroyBoxes() {
-  while (divBoxes.firstChild) {
-    divBoxes.removeChild(divBoxes.firstChild);
-  }
+  divBoxes.innerHTML = ""
+  // while (divBoxes.firstChild) {
+  //   divBoxes.removeChild(divBoxes.firstChild);
+  // }
 }
 
 function createBoxes(amount) {
